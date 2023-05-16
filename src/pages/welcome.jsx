@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 import Imagem from '../assets/logo.png';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Welcome(){
+    const navigate = useNavigate();
+    
     return (   
         <>
         <Cointainer>
             <Logo src={Imagem}/>
             <Title>ZapRecall</Title>
-            <Button>Iniciar Recall!</Button>
+            <Button onClick={() => navigate('/game')}>Iniciar Recall!</Button>
         </Cointainer>
         </>
     );
