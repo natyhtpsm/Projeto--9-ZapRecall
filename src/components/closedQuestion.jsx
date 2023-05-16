@@ -1,16 +1,32 @@
 import styled from 'styled-components';
 import Setinha from '../assets/seta_play.png';
+import Xizinho from '../assets/icone_erro.png';
+import Quase from '../assets/icone_quase.png';
+import Certo from '../assets/icone_certo.png';
 
 export default function ClosedQuestion(props){
     function changeState(){
         props.setCardState('opened');
     };
 
+    const getIcon = () => {
+        if (props.cardColor === 'preto') {
+          return Setinha;
+        } else if (props.cardColor === 'red') {
+          return Xizinho;
+        } else if (props.cardColor === 'yellow') {
+          return Quase;
+        } else if (props.cardColor === 'green'){
+            return Certo;
+        }
+        
+      };
+
     return(
         <>
             <Container>
                 <Title>Pergunta {props.number}</Title>
-                <Play src={Setinha} onClick={() => changeState()}/>
+                <Play src={getIcon()} onClick={() => changeState()}/>
             </Container>
         </>
     );

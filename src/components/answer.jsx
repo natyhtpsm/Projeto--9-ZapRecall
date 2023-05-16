@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 
 export default function Answer(props){
+    function changeColor(color){
+        props.setCardColor(color);
+        props.setCardState('closed');
+
+    };
     return(
         <>
             <Container>
                 <Title>{props.resposta}</Title>
                 <Buttons>
-                    <Wrong>Não lembrei</Wrong>
-                    <Remember>Quase não lembrei</Remember>
-                    <Right>Zap!</Right>
+                    <Wrong onClick={() => changeColor('red')}>Não lembrei</Wrong>
+                    <Remember onClick={() => changeColor('yellow')}>Quase não lembrei</Remember>
+                    <Right onClick={() => changeColor('green')}>Zap!</Right>
                 </Buttons>
             </Container>
         </>
