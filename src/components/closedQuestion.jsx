@@ -7,25 +7,36 @@ import Certo from '../assets/icone_certo.png';
 export default function ClosedQuestion(props){
     function changeState(){
         props.setCardState('opened');
-    };
-
+    }
     const getIcon = () => {
         if (props.cardColor === 'preto') {
-          return Setinha;
+            return Setinha;
         } else if (props.cardColor === 'red') {
-          return Xizinho;
+            return Xizinho;
         } else if (props.cardColor === 'yellow') {
           return Quase;
         } else if (props.cardColor === 'green'){
             return Certo;
-        }
-        
-      };
+        } 
+    }
+    function getColor() {
+        if (props.cardColor === 'preto') {
+            return '#00000';
+        } else if (props.cardColor === 'red') {
+            return '#FF3030';
+        } else if (props.cardColor === 'yellow') {
+          return '#FF922E';
+        } else if (props.cardColor === 'green'){
+            return '#2FBE34';
+        } 
+    }
+
+    let colorir = getColor();
 
     return(
         <>
             <Container>
-                <Title>Pergunta {props.number}</Title>
+                <Title color={colorir}>Pergunta {props.number}</Title>
                 <Play src={getIcon()} onClick={() => changeState()}/>
             </Container>
         </>
@@ -55,5 +66,8 @@ const Title = styled.h1`
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    color: #333333;
+    color: ${props => props.color};
+    text-decoration:${ props => props.color === '#00000' ? 'none' :  'line-through'};
 `
+
+

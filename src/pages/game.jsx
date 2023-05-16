@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import Imagem from '../assets/logo.png';
 import Flashcard from '../components/flashcard';
 import Deck from '../components/deck';
+import { useState } from 'react';
 
 export default function Game(){
+    const [contado, setContado] = useState(0);
+
     return(
         <>
         <Container>
@@ -15,11 +18,12 @@ export default function Game(){
                 {Deck.map((card, i) => {
                     return (
                         <>
-                            <Flashcard Q={card.Q} R={card.R} I={i}/>
+                            <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
                         </>
                         )
                     })}
             </Tabuleiro>
+            <Footer>{contado}/4 CONCLUÍDOS</Footer>
         </Container>
         </>
     );
@@ -35,12 +39,13 @@ const Tabuleiro = styled.div`
 
 const Container = styled.div`
     background-color: #FB6B6B;
-    height: 100vh;
-    width: 100vw;
+    width: 375px;
+    height: 667px;
     display: flex;
     justify-content: center;
     align-itens: center;
     flex-direction: column;
+    overflow-x: none;
 `
 const Header = styled.div`
     height: 60px;
@@ -51,6 +56,25 @@ const Header = styled.div`
     align-itens: center;
     flex-direction: row;
 `
+const Footer = styled.div`
+    position: fixed;
+    display: flex;
+    align-itens: center;
+    justify-content: center;
+    position: absolute;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    width: 375px;
+    height: 70px;
+    margin-top: 400px;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+`
+
 const Logo = styled.img`
     height: 60px;
     width: 52px;

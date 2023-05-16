@@ -4,7 +4,7 @@ export default function Answer(props){
     function changeColor(color){
         props.setCardColor(color);
         props.setCardState('closed');
-
+        props.setContado(props.contado+1);
     };
     return(
         <>
