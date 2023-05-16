@@ -10,22 +10,26 @@ export default function Game(){
             <Header>
                 <Logo src={Imagem}/>
                 <Title>ZapRecall</Title>
-                <Tabuleiro>
-                    {Deck.map((card, i) => {
-                        return (
-                            <>
-                                <Flashcard Q={card.Q} R={card.R} I={i}/>
-                            </>
+            </Header>
+            <Tabuleiro>
+                {Deck.map((card, i) => {
+                    return (
+                        <>
+                            <Flashcard Q={card.Q} R={card.R} I={i}/>
+                        </>
                         )
                     })}
-                </Tabuleiro>
-            </Header>
+            </Tabuleiro>
         </Container>
         </>
     );
 };
 
 const Tabuleiro = styled.div`
+    margin-top: 59px;
+    margin-left: 40px;
+    height: 500px;
+    width: 255.17px;
  
 `
 
@@ -36,11 +40,13 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-itens: center;
+    flex-direction: column;
 `
 const Header = styled.div`
     height: 60px;
     width: 255.17px;
-    margin-top: 42px;
+    margin-left: 59px;
+    margin-top: 82px;
     display: flex;
     align-itens: center;
     flex-direction: row;
@@ -48,7 +54,6 @@ const Header = styled.div`
 const Logo = styled.img`
     height: 60px;
     width: 52px;
-    margin-left: 0px;
 `
 const Title = styled.h1`
     font-family: 'Righteous';
@@ -62,4 +67,5 @@ const Title = styled.h1`
     text-align: center;
     letter-spacing: -0.012em;
     color: #FFFFFF;
+
 `

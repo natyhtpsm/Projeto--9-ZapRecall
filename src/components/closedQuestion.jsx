@@ -29,6 +29,7 @@ const Container = styled.div`
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    margin-bottom: 25px;
 `
 const Title = styled.h1`
     width: 87px;

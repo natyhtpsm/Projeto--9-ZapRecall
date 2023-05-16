@@ -21,6 +21,7 @@ const Container = styled.div`
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    margin-bottom: 25px;
 `
 const Title = styled.h1`
     font-family: 'Recursive';
@@ -29,10 +30,12 @@ const Title = styled.h1`
     font-size: 18px;
     line-height: 22px;
     color: #333333;
+    margin-top: 18px;
+    margin-left: 15px;
 `
 const Seta = styled.img`
     width: 30px;
     height: 20px;
-    margin-top: 105px;
+    margin-top: 80px;
     margin-left: 254px;
 `
