@@ -37,7 +37,7 @@ export default function ClosedQuestion(props){
         <>
             <Container>
                 <Title color={colorir}>Pergunta {props.number}</Title>
-                <Play src={getIcon()} onClick={() => changeState()}/>
+                <Play src={getIcon()}   onClick={colorir === '#00000' ? () => changeState() : null}/>
             </Container>
         </>
     );

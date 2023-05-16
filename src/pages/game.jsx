@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 export default function Game(){
     const [contado, setContado] = useState(0);
+    let shuffle = (Deck.sort(() => Math.random() - 0.5)).slice(4);
 
     return(
         <>
@@ -15,7 +16,7 @@ export default function Game(){
                 <Title>ZapRecall</Title>
             </Header>
             <Tabuleiro>
-                {Deck.map((card, i) => {
+                {shuffle.map((card, i) => {
                     return (
                         <>
                             <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
@@ -30,28 +31,29 @@ export default function Game(){
 };
 
 const Tabuleiro = styled.div`
-    margin-top: 59px;
+    margin-top: 30px;
     margin-left: 40px;
     height: 500px;
     width: 255.17px;
- 
+    margin-bottom: 200px;
 `
 
 const Container = styled.div`
     background-color: #FB6B6B;
-    width: 375px;
-    height: 667px;
+    width: 100vw;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-itens: center;
     flex-direction: column;
     overflow-x: none;
+    overflow-y: scroll;
 `
 const Header = styled.div`
     height: 60px;
     width: 255.17px;
     margin-left: 59px;
-    margin-top: 82px;
+    margin-top: 200px;
     display: flex;
     align-itens: center;
     flex-direction: row;
@@ -73,6 +75,7 @@ const Footer = styled.div`
     margin-top: 400px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    bottom: 0;
 `
 
 const Logo = styled.img`
