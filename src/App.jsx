@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Welcome from './pages/welcome';
 import Game from './pages/game';
 
+
 function App() {
   return (
     <>
