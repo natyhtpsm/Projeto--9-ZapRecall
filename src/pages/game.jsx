@@ -24,7 +24,7 @@ export default function Game(){
                         )
                     })}
             </Tabuleiro>
-            <Footer>{contado}/4 CONCLUÍDOS</Footer>
+            <Footer data-test="footer">{contado}/4 CONCLUÍDOS</Footer>
         </Container>
         </>
     );
