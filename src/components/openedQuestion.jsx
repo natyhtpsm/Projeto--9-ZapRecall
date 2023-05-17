@@ -9,7 +9,9 @@ export default function OpenedQuestion(props){
         <>
             <Container>
                 <Title>{props.pergunta}</Title>
-                <Seta onClick={() => changeState()} src={virar}/>
+                <Bottom>
+                    <Seta onClick={() => changeState()} src={virar}/>
+                </Bottom>
             </Container>
         </>
     );
@@ -22,6 +24,11 @@ const Container = styled.div`
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-bottom: 25px;
+    display: flex; 
+    align-itens: center;
+    justify-content: space-between;
+    flex-direction: column;
+
 `
 const Title = styled.h1`
     font-family: 'Recursive';
@@ -30,12 +37,20 @@ const Title = styled.h1`
     font-size: 18px;
     line-height: 22px;
     color: #333333;
-    margin-top: 18px;
-    margin-left: 15px;
+    margin-top: 20px;
+    margin-left: 15.05px;
+`
+const Bottom = styled.div`
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    border-radius: 5px;
+    display:flex;
+    align-itens: center;
+    justify-content: center;
 `
 const Seta = styled.img`
     width: 30px;
     height: 20px;
-    margin-top: 80px;
-    margin-left: 254px;
+    margin-left: 240px;
 `

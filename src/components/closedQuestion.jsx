@@ -46,8 +46,7 @@ export default function ClosedQuestion(props){
 const Play = styled.img`
     width: 20px;
     height: 23px;
-    margin-left: 265px;
-    margin-top: 20px;
+    margin-right: 15px;
 `
 
 const Container = styled.div`
@@ -57,10 +56,14 @@ const Container = styled.div`
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 const Title = styled.h1`
     width: 87px;
     height: 19px;
+    margin-left: 15px;
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 700;

@@ -27,12 +27,16 @@ const Container = styled.div`
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-bottom: 25px;
+    display: flex;
+    align-itens: center;
+    justify-content: space-between;
+    flex-direction: column;
 `
 const Title = styled.h1`
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 22px;
     color: #333333;
     margin-top: 18px;
@@ -41,9 +45,10 @@ const Title = styled.h1`
 const Buttons = styled.div`
     height:37.17;
     width: 271px;
-    margin-top: 33px;
+    margin-left: 15px;
     display: flex;
     justify-content: space-around;
+    background-color: blue;
 
 `
 const Wrong = styled.button`
@@ -58,8 +63,6 @@ const Wrong = styled.button`
     line-height: 14px;
     text-align: center;
     color: #FFFFFF;
-    margin-left: 17px;
-    margin-right: 7.74px;
     
 `
 const Remember = styled.button`
@@ -74,7 +77,7 @@ const Remember = styled.button`
     color: #FFFFFF;
     background: #FF922E;
     border-radius: 5px;
-    margin-right: 7.74px;
+
 `
 const Right = styled.button`
     width: 85.17px;
@@ -88,5 +91,5 @@ const Right = styled.button`
     color: #FFFFFF;
     background: #2FBE34;
     border-radius: 5px;
-    margin-right: 7.74px;
+
 `
