@@ -35,9 +35,9 @@ export default function ClosedQuestion(props){
 
     return(
         <>
-            <Container>
-                <Title color={colorir}>Pergunta {props.number}</Title>
-                <Play src={getIcon()}   onClick={colorir === '#00000' ? () => changeState() : null}/>
+            <Container data-test="flashcard">
+                <Title data-test="flashcard-text" color={colorir}>Pergunta {props.number}</Title>
+                <Play data-test="play-btn" src={getIcon()}   onClick={colorir === '#00000' ? () => changeState() : null}/>
             </Container>
         </>
     );
@@ -70,7 +70,7 @@ const Title = styled.h1`
     font-size: 16px;
     line-height: 19px;
     color: ${props => props.color};
-    text-decoration:${ props => props.color === '#00000' ? 'none' :  'line-through'};
+    text-decoration:${props => props.color === '#00000' ? 'none' :  'line-through'};
 `
 
 

@@ -8,9 +8,9 @@ export default function OpenedQuestion(props){
     return(
         <>
             <Container>
-                <Title>{props.pergunta}</Title>
+                <Title data-test="flashcard-text">{props.pergunta}</Title>
                 <Bottom>
-                    <Seta onClick={() => changeState()} src={virar}/>
+                    <Seta data-test="turn-btn" onClick={() => changeState()} src={virar}/>
                 </Bottom>
             </Container>
         </>

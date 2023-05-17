@@ -11,7 +11,7 @@ export default function Welcome(){
         <Cointainer>
             <Logo src={Imagem}/>
             <Title>ZapRecall</Title>
-            <Button onClick={() => navigate('/game')}>Iniciar Recall!</Button>
+            <Button data-test = "start-btn" onClick={() => navigate('/game')}>Iniciar Recall!</Button>
         </Cointainer>
         </>
     );
