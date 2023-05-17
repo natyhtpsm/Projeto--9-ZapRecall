@@ -41,7 +41,7 @@ const Tabuleiro = styled.div`
 const Container = styled.div`
     background-color: #FB6B6B;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-itens: center;

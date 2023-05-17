@@ -48,7 +48,7 @@ const Buttons = styled.div`
     margin-left: 15px;
     display: flex;
     justify-content: space-around;
-    background-color: blue;
+    margin-bottom: 10px;
 
 `
 const Wrong = styled.button`
