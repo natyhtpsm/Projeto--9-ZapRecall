@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function Welcome(){
-    const navigate = useNavigate();
-    
+    const navigate = useNavigate();    
     return (   
         <>
         <Cointainer>
@@ -21,7 +20,6 @@ const Logo = styled.img`
     width: 136px;
     height: 161px;
     margin-bottom: 13px;
-
 `
 const Button = styled.button`
     background-color: #ffffff;

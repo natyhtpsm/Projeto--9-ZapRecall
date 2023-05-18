@@ -10,25 +10,26 @@ export default function Game(){
 
     return(
         <>
-        <Container>
-            <Header>
-                <Logo src={Imagem}/>
-                <Title>ZapRecall</Title>
-            </Header>
-            <Tabuleiro>
-                {shuffle.map((card, i) => {
-                    return (
-                        <>
-                            <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
-                        </>
-                        )
-                    })}
-            </Tabuleiro>
-            <Footer data-test="footer">{contado}/4 CONCLUÍDOS</Footer>
-        </Container>
+            <Container>
+                <Header>
+                    <Logo src={Imagem}/>
+                    <Title>ZapRecall</Title>
+                </Header>
+                <Tabuleiro>
+                    {shuffle.map((card, i) => {
+                        return (
+                            <>
+                                <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
+                            </>
+                            )
+                        })}
+                </Tabuleiro>
+                <Footer data-test="footer">{contado}/4 CONCLUÍDOS</Footer>
+            </Container>
         </>
     );
 };
+ 
 
 const Tabuleiro = styled.div`
     margin-top: 30px;
@@ -63,7 +64,6 @@ const Footer = styled.div`
     display: flex;
     align-itens: center;
     justify-content: center;
-    position: absolute;
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
