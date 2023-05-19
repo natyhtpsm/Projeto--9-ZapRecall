@@ -19,9 +19,9 @@ export default function Game(){
                     {shuffle.map((card, i) => {
                         return (
                             <>
-                                <div data-test="flahscard">
-                                    <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
-                                </div>
+
+                                <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
+
                             </>
                             )
                         })}
