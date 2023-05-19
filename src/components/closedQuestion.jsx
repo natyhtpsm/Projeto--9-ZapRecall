@@ -35,7 +35,7 @@ export default function ClosedQuestion(props){
 
     return(
         <>
-            <Container data-test="flashcard">
+            <Container>
                 <Title data-test="flashcard-text" color={colorir}>Pergunta {props.number}</Title>
                 <Play data-test="play-btn" src={getIcon()}   onClick={colorir === '#00000' ? () => changeState() : null}/>
             </Container>
