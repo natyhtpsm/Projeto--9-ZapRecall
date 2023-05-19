@@ -5,15 +5,18 @@ import Opened from './openedQuestion';
 import Answer from './answer';
 
 export default function Flashcard(props){
+    const [cardColor, setCardColor] = useState('preto');
+    const [cardState, setCardState] = useState('closed');
+
     const question = props.Q;
     const answer = props.R;
     const index = props.I;
 
-    const [cardColor, setCardColor] = useState('preto');
-    const [cardState, setCardState] = useState('closed');
-    
+    let conteudo = <></>;
 
-    if(cardState === 'closed'){return <div data-test="flashcard"><Closed number={index+1} setCardState={setCardState} cardColor={cardColor} /></div>}
-    else if(cardState==='opened'){return <div data-test="flashcard"><Opened pergunta={question} setCardState={setCardState}/></div>}
-    else if(cardState==='answer'){return <div data-test="flashcard"><Answer resposta={answer} setCardState={setCardState} setCardColor={setCardColor} setContado={props.setContado} contado={props.contado}/></div>}
+    if(cardState === 'closed'){conteudo = (<Closed number={index+1} setCardState={setCardState} cardColor={cardColor}/>) }
+    else if(cardState==='opened'){conteudo = (<Opened pergunta={question} setCardState={setCardState}/>)}
+    else if(cardState==='answer'){conteudo = (<Answer resposta={answer} setCardState={setCardState} setCardColor={setCardColor} setContado={props.setContado} contado={props.contado}/>)}
+
+    return <div data-test="flashcard">{conteudo}</div>
 }
