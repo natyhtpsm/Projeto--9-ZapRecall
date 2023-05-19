@@ -8,7 +8,7 @@ export default function Answer(props){
     };
     return(
         <>
-            <Container>
+            <Container data-test="flahscard">
                 <Title data-test="flashcard-text">{props.resposta}</Title>
                 <Buttons>
                     <Wrong data-test="no-btn" onClick={() => changeColor('red')}>Não lembrei</Wrong>
