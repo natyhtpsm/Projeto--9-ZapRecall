@@ -11,9 +11,9 @@ export default function Answer(props){
             <Container>
                 <Title data-test="flashcard-text">{props.resposta}</Title>
                 <Buttons>
-                    <Wrong data-test="no-icon" onClick={() => changeColor('red')}>Não lembrei</Wrong>
-                    <Remember data-test="partial-icon" onClick={() => changeColor('yellow')}>Quase não lembrei</Remember>
-                    <Right data-test="zap-icon" onClick={() => changeColor('green')}>Zap!</Right>
+                    <Wrong data-test="no-btn" onClick={() => changeColor('red')}>Não lembrei</Wrong>
+                    <Remember data-test="partial-btn" onClick={() => changeColor('yellow')}>Quase não lembrei</Remember>
+                    <Right data-test="zap-btn" onClick={() => changeColor('green')}>Zap!</Right>
                 </Buttons>
             </Container>
         </>
