@@ -9,24 +9,24 @@ export default function ClosedQuestion(props){
         props.setCardState('opened');
     }
     const getIcon = () => {
-        if (props.cardColor === 'preto') {
+        if (props.cardcolor === 'preto') {
             return Setinha;
-        } else if (props.cardColor === 'red') {
+        } else if (props.cardcolor === 'red') {
             return Xizinho;
-        } else if (props.cardColor === 'yellow') {
+        } else if (props.cardcolor === 'yellow') {
           return Quase;
-        } else if (props.cardColor === 'green'){
+        } else if (props.cardcolor === 'green'){
             return Certo;
         } 
     }
     function getColor() {
-        if (props.cardColor === 'preto') {
+        if (props.cardcolor === 'preto') {
             return '#00000';
-        } else if (props.cardColor === 'red') {
+        } else if (props.cardcolor === 'red') {
             return '#FF3030';
-        } else if (props.cardColor === 'yellow') {
+        } else if (props.cardcolor === 'yellow') {
           return '#FF922E';
-        } else if (props.cardColor === 'green'){
+        } else if (props.cardcolor === 'green'){
             return '#2FBE34';
         } 
     }

@@ -4,7 +4,7 @@ import Opened from './openedQuestion';
 import Answer from './answer';
 
 export default function Flashcard(props) {
-  const [cardColor, setCardColor] = useState('preto');
+  const [cardcolor, setCardColor] = useState('preto');
   const [cardState, setCardState] = useState('closed');
   const question = props.Q;
   const answer = props.R;
@@ -13,7 +13,7 @@ export default function Flashcard(props) {
   let conteudo = null;
 
   if (cardState === 'closed') {
-    conteudo = <Closed number={index + 1} setCardState={setCardState} cardColor={cardColor} />;
+    conteudo = <Closed number={index + 1} setCardState={setCardState} cardcolor={cardcolor} />;
   } else if (cardState === 'opened') {
     conteudo = <Opened pergunta={question} setCardState={setCardState} />;
   } else if (cardState === 'answer') {
