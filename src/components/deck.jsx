@@ -9,4 +9,7 @@ const Deck = [
     { Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
 ];
 
-export default Deck;
+const shuffle = (Deck.sort(() => Math.random() - 0.5)).slice(4);
+
+
+export default shuffle;

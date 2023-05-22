@@ -20,5 +20,5 @@ export default function Flashcard(props) {
     conteudo = <Answer resposta={answer} setCardState={setCardState} setCardColor={setCardColor} setContado={props.setContado} contado={props.contado} />;
   }
 
-  return <div data-test="flashcard">{conteudo}</div>;
+  return <div>{conteudo}</div>;
 }

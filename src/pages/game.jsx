@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import Imagem from '../assets/logo.png';
 import Flashcard from '../components/flashcard';
-import Deck from '../components/deck';
+import shuffle from '../components/deck';
 import { useState } from 'react';
 
 export default function Game(){
     const [contado, setContado] = useState(0);
-    let shuffle = (Deck.sort(() => Math.random() - 0.5)).slice(4);
 
     return(
         <>
@@ -20,9 +19,7 @@ export default function Game(){
                         {shuffle.map((card, i) => {
                             return (
                                 <>
-
-                                    <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
-
+                                    <Flashcard data-test="flashcard" Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
                                 </>
                                 )
                             })}
@@ -33,7 +30,6 @@ export default function Game(){
         </>
     );
 };
- 
 
 const Tabuleiro = styled.div`
     margin-top: 30px;
