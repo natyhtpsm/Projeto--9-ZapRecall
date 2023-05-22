@@ -10,24 +10,26 @@ export default function Game(){
 
     return(
         <>
-            <Container>
-                <Header>
-                    <Logo src={Imagem}/>
-                    <Title>ZapRecall</Title>
-                </Header>
-                <Tabuleiro>
-                    {shuffle.map((card, i) => {
-                        return (
-                            <>
+            <CustomScrollbar>
+                <Container>
+                    <Header>
+                        <Logo src={Imagem}/>
+                        <Title>ZapRecall</Title>
+                    </Header>
+                    <Tabuleiro>
+                        {shuffle.map((card, i) => {
+                            return (
+                                <>
 
-                                <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
+                                    <Flashcard Q={card.Q} R={card.R} I={i} setContado={setContado} contado={contado}/>
 
-                            </>
-                            )
-                        })}
-                </Tabuleiro>
-                <Footer data-test="footer">{contado}/4 CONCLUÍDOS</Footer>
-            </Container>
+                                </>
+                                )
+                            })}
+                    </Tabuleiro>
+                    <Footer data-test="footer">{contado}/4 CONCLUÍDOS</Footer>
+                </Container>
+            </CustomScrollbar>
         </>
     );
 };
@@ -51,6 +53,7 @@ const Container = styled.div`
     flex-direction: column;
     overflow-x: none;
     overflow-y: scroll;
+    
 `
 const Header = styled.div`
     height: 60px;
@@ -98,3 +101,17 @@ const Title = styled.h1`
     color: #FFFFFF;
 
 `
+const CustomScrollbar = styled.div`
+  ::-webkit-scrollbar {
+    width: 3px; 
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: transparent; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+`;
